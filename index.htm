@@ -7,10 +7,28 @@
 <!--<link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/index.css">-->
 
+<script src="js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
 <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
+<script>
+$(
+function(){
+setInterval(
+_ => $("#a").text((new Date()%500>250)?"\\(o_o)/":"_(o_o)_")
+,125)
+
+setInterval(
+_ => $("#a").css("top",25*Math.sin((new Date()%2000)/1000*Math.PI)+"px")
+,20)
+});
+</script>
 </head>
-<body>
-blank
+<body style="text-align:center">
+<h1>This site is under construction</h1>
+<br><br>
+<div style="position:relative;" id="a"></div>
+<br><br><br>
+<div style="transform: rotate(180deg); color: red;">VVVVVVVVVVVVVVVVVVV</div>
 </body>
 </html>
