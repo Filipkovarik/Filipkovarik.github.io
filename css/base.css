@@ -1,1 +1,10 @@
-topnav {position: fixed; width: 100vw}
+:root {
+	--scheme-color1: green;
+	--scheme-color2: teal;
+	--scheme-border-color: black;
+}
+* {margin: 0; box-sizing: border-box;}
+body {padding: 0; background: var(--scheme-color1);}
+
+
+iframe#topnav {display: fixed; width: 100vw; height: auto; border: none; z-index: 10}
