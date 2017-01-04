@@ -1,0 +1,5 @@
+topnav, shadow {display: block; width: 100%}
+
+topnav {height: 90%}
+
+shadow {height: 10%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))}
