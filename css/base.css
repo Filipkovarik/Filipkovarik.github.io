@@ -1,10 +1,11 @@
 :root {
-	--scheme-color1: green;
-	--scheme-color2: teal;
+	--scheme-color-1: green;
+	--scheme-color-2: teal;
+	--scheme-color-3: purple;
 	--scheme-border-color: black;
 }
 * {margin: 0; box-sizing: border-box;}
-body {padding: 0; background: var(--scheme-color1);}
+body {padding: 0; background: var(--scheme-color-1);}
 
 
-iframe#topnav {display: fixed; width: 100vw; height: auto; border: none; z-index: 10}
+iframe#topnav {position: fixed; width: 100vw; height: 10vh; border: none; z-index: 10}
