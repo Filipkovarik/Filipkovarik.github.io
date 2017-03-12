@@ -8,4 +8,4 @@
 body {padding: 0; background: var(--scheme-color-1);}
 
 
-iframe#topnav {position: fixed; width: 100vw; height: 10vh; border: none; z-index: 10}
+iframe#topnav {position: fixed; width: 100vw; height: 10vh; border: none; z-index: 10; overflow: scroll}
