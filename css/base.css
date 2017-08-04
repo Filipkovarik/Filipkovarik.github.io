@@ -1,11 +1,13 @@
 :root {
-	--scheme-color-1: green;
-	--scheme-color-2: teal;
-	--scheme-color-3: purple;
+	--scheme-color-1: burlywood;
+	--scheme-color-2: chocolate;
+	--scheme-color-3: navajowhite;
 	--scheme-border-color: black;
+	--scheme-text-color-1: black;
+	--scheme-border-radius: 3px
 }
 * {margin: 0; box-sizing: border-box;}
 body {padding: 0; background: var(--scheme-color-1);}
 
 
-iframe#topnav {position: fixed; width: 100vw; height: 10vh; border: none; z-index: 10; overflow: scroll}
+iframe#topnav {position: fixed; width: 100vw; height: calc(5vh + 20px); border: none; z-index: 10; overflow: scroll; box-shadow: 0px 1px 2vh 0px rgba(0, 0, 0, 0.8); border-bottom-left-radius: var(--scheme-border-radius); border-bottom-right-radius: var(--scheme-border-radius)}
