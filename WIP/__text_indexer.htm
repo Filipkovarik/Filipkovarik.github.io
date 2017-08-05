@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+class LinkedList {
+	constructor(...l){this.init(); this.fill(l);}
+	init(){this.head = null; this.tail = null;}
+}
+
+class LinkedListItem {
+	constructor(value,list,prev,next){
+		this.list = list;
+		this.value = value;
+		this.prev = prev;
+		this.next = next;
+	}
+	insertAfter(item){
+		if (!(item instanceof LinkedListItem))item = new LinkedListItem(item);
+		item.list = this.list;
+		
+		item.prev = this;
+		item.next = this.next;
+		
+		if(this.next) this.next.prev = item;
+		this.next = item;
+		
+		if (this.list.tail == this) this.list.tail = item;
+	}
+	insertBefore(item){
+		if (!(item instanceof LinkedListItem))item = new LinkedListItem(item);
+		item.list = this.list;
+		
+		item.next = this;
+		item.prev = this.prev;
+		
+		if(this.prev) this.
+	}
+	get(){
+		return this.value;
+	}
+	set(v){
+		return this.value = v;
+	}
+}
+
+function (){
+
+
+} 
+
+
+function go_go_power_rangers({value: v}){
+let r = /\S-(\s|[,\.;!?])/g;
+let m;
+let a = [];
+while (m = r.exec(v)) a.push({m:m+"",i:})
+}
+</script>
+</head>
+<body><textarea id="1" onblur="go_go_power_rangers(this)"></textarea> <textarea id="2"></textarea></body>
+</html>
