@@ -4,7 +4,7 @@ html, body {width: 100%; height: 100%}
 
 topnav /*,shadow*/ {display: block; width: 100%}
 
-topnav {height: 100%; background-color: var(--scheme-color-2);}
+topnav {height: 100%; background-color: linear-gradient(to top,var(--scheme-color-2), var(--scheme-color-3));}
 
 /*shadow {height: 10%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))}*/
 
