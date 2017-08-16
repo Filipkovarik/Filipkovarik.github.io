@@ -1,19 +1,50 @@
-html {font-family: Tahoma, Geneva, sans-serif; overflow: hidden}
+:root {
+	--icon-size: 70vh;
+}
 
-html, body {width: 100%; height: 100%}
 
-topnav /*,shadow*/ {display: block; width: 100%}
+html {
+	font-family: Tahoma, Geneva, sans-serif;
+	overflow: hidden;
+}
 
-topnav {height: 100%; background-color: linear-gradient(to top,var(--scheme-color-2), var(--scheme-color-3));}
+html, body, topnav {
+	width: 100%;
+	height: 100%;
+}
 
-/*shadow {height: 10%; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0))}*/
+topnav {
+	display: flex;
+	background-color: linear-gradient(to top,var(--scheme-color-2), var(--scheme-color-3));
+}
 
-navitem {display: inline-block; height: 100%; padding: calc(50vh - 0.5em) 2vw; font-size: 29vh;}
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
-navitem:hover  {/*position: relative; top: 20%*/}
+navitemout  {
+	display: inline-flex;
+    align-items: center;
+	align-self: stretch;
+	padding: 0 2vw;
+    font-size: 29vh;
+	border-right: 1px var(--scheme-border-color) solid;
+}
 
-a {display: inline-block; height: 100%; text-decoration: none; color: inherit}
+navitemout:hover  {
+	background-color: var(--scheme-color-3);
+}
 
-navitemout  {display: inline-block; height: 100%; border-right: 1px var(--scheme-border-color) solid;}
+navitemout.no-padding {
+	padding: 0;
+}
 
-navitemout:hover  {background-color: var(--scheme-color-3);}
+icon {
+	margin: 0 calc(calc(100vh - var(--icon-size))/2 + 1px)
+}
+
+icon img {
+	min-height: 16px;
+	height: var(--icon-size);
+}
