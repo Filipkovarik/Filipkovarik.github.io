@@ -3,22 +3,48 @@
 	<head>
 		<title>About me: Sophia2329.github.io</title>
 		<link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.min.css">
-
+		<link rel="stylesheet" href="../css/tipso/tipso.min.css">
 		<link rel="stylesheet" href="../css/base.css">
 		<link rel="stylesheet" href="../css/about_index.css">
 
 		<script src="../js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
 		<script src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 		<script src="../js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+		<script src="../js/tipso/tipso.min.js"></script>
 		<script src="../js/_template_.js"></script>
+		
+		<script>
+			$(_=>{
+			
+			jQuery("#tipso-linguistics").tipso({
+				position: 'bottom',
+				contentElementId: "tipsocontent-linguistics",
+				background: 'white',
+				color: 'black',
+				width: '50vw',
+				height: '20vh'
+			});
+			
+			})
+		</script>
 	</head>
 	<body>
 		<iframe src="../topnav.htm" id="topnav"></iframe>
 		<iframeghost></iframeghost>
 		<page>
 			<content>
-			
-			
+				<p>
+					Hello, I'm <a href="name.htm">Sophia</a>! <br>					
+					Things I'm interested in:
+					<tipso id="tipso-linguistics">Linguistics</tipso>
+					<none-disp>
+						<tipsocontent id="tipsocontent-linguistics">
+							A recent interest on my life timeline.
+							I'm a Czech native, fluent in English, learning French in school, and casually Esperanto at home.
+							I'm interested in various languages, including Japanese (and its kanji).
+						</tipsocontent>
+					</none-disp>
+				</p>
 			</content>
 		</page>
 	</body>
