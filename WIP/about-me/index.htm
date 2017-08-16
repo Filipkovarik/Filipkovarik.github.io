@@ -16,14 +16,20 @@
 		<script>
 			$(_=>{
 			
-			jQuery("#tipso-linguistics").tipso({
+			ext=(o,p)=>((p,r)=>(Object.keys(o).forEach(k=>r[k]=o[k]),Object.keys(p).forEach(k=>r[k]=p[k]),r))(o, p,{})
+			
+			tpsdef = {
 				position: 'bottom',
-				contentElementId: "tipsocontent-linguistics",
 				background: 'white',
 				color: 'black',
 				width: '50vw',
-				height: '20vh'
-			});
+				height: '50vh'
+			}
+			
+			tps=(nm,p={contentElementId: "tipsocontent-"+nm})=>$("#tipso-"+nm).tipso(ext(tpsdef,ext({}, p)))
+			
+			tps("name")
+			tps("linguistics")
 			
 			})
 		</script>
@@ -34,7 +40,13 @@
 		<page>
 			<content>
 				<p>
-					Hello, I'm <a href="name.htm">Sophia</a>! <br>					
+					Hello, I'm <tipso id="tipso-name">Sophia</tipso>!
+					<none-disp>
+						<tipsocontent id="tipsocontent-name">
+							A name chosen for its meaning, derived from Ancient Greek σοφῐ́ᾱ, "knowledge of a higher kind: learning, wisdom" (Wiktionary.org).
+						</tipsocontent>
+					</none-disp>
+					<br>					
 					Things I'm interested in:
 					<tipso id="tipso-linguistics">Linguistics</tipso>
 					<none-disp>
@@ -42,8 +54,10 @@
 							A recent interest on my life timeline.
 							I'm a Czech native, fluent in English, learning French in school, and casually Esperanto at home.
 							I'm interested in various languages, including Japanese (and its kanji).
+							I like constructing languages and writing systems.
 						</tipsocontent>
 					</none-disp>
+					, Philosophy
 				</p>
 			</content>
 		</page>
