@@ -28,7 +28,7 @@ navitemout  {
     align-items: center;
 	align-self: stretch;
 	padding: 0 2vw;
-    font-size: 29vh;
+    font-size: 29vmin;
 	border-right: 1px var(--scheme-border-color) solid;
 }
 
@@ -41,7 +41,7 @@ navitemout.no-padding {
 }
 
 icon {
-	margin: 0 calc(calc(100vh - var(--icon-size))/2 + 1px)
+	margin: 0 calc(calc(100vh - var(--icon-size))/2 + 1px);
 }
 
 icon img {

@@ -11,6 +11,7 @@
 	--content-padding-v: 2vh;
 	--content-padding-h: 2vw;
 }
+
 * {margin: 0; box-sizing: border-box;}
 body {padding: 0; background: var(--scheme-color-1);}
 
@@ -33,11 +34,15 @@ iframeghost {
 
 page {
 	display: block;
+	width: 100vw;
+	height: 100%;
 }
+
 content {
 	display: block;
 	margin: var(--content-margin-v) var(--content-margin-h);
 	padding: var(--content-padding-v) var(--content-padding-h);
-	border: 2px ridge blue;
-	border-radius: 5px;	
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 2.2vmin;
+	min-height: calc(90vh - var(--topnav-height));
 }
