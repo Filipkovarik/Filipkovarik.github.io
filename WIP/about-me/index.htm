@@ -22,17 +22,13 @@
 				position: 'bottom',
 				background: 'white',
 				color: 'black',
-				width: '50vw',
-				height: '50vh'
+				width: '25vw',
+				maxWidth: '50vw'
 			}
 			
-			tps=(nm,p={contentElementId: "tipsocontent-"+nm})=>$("#tipso-"+nm).tipso(ext(tpsdef,ext({}, p)))
+			tps=(nm,p={})=>$("#tipso-"+nm).tipso(ext(tpsdef,ext({contentElementId: "tipsocontent-"+nm}, p)))
 			
-			tps("name")
-			tps("linguistics")
-			tps("philosophy")
-			tps("maths")
-			tps("compsci")
+			$("tipso").toArray().map(x=>x.id.split("tipso-")[1]).forEach(x=>tps(x, {tooltipHover: $("#tipso-"+x).attr("tooltipHover")=="true"}))
 			
 			})
 		</script>
@@ -42,43 +38,78 @@
 		<iframeghost></iframeghost>
 		<page>
 			<content>
-				<p>
-					Hello, I'm <tipso id="tipso-name">Sophia</tipso>!
-					<none-disp>
-						<tipsocontent id="tipsocontent-name">
-							A name chosen for its meaning, derived from Ancient Greek σοφῐ́ᾱ, "knowledge of a higher kind: learning, wisdom" (Wiktionary.org).
-						</tipsocontent>
-					</none-disp>
-					<br>					
-					Things I'm interested in:
-					<tipso id="tipso-linguistics">Linguistics</tipso>
-					<none-disp>
-						<tipsocontent id="tipsocontent-linguistics">
-							A recent interest on my life timeline.
-							I'm a Czech native, fluent in English, learning French in school, and casually Esperanto at home.
-							I'm interested in various languages, including Japanese (and its kanji).
-							I like constructing languages and writing systems.
-						</tipsocontent>
-					</none-disp>
-					, <tipso id="tipso-compsci">Computer Science</tipso>
-					<none-disp>
-						<tipsocontent id="tipsocontent-compsci">
-							This was my main interest up until I got into linguistics. Binary adders, cellular automata, the halting problem; certainly not everything, but also a lot. As for programming languagees: I use HTML, CSS and JS (duh) and I know a bunch of Lua and recently Python, also some C# and Java basics.
-						</tipsocontent>
-					</none-disp>
-					, <tipso id="tipso-maths">Maths</tipso>
-					<none-disp>
-						<tipsocontent id="tipsocontent-maths">
-							Unlike many people, I've been shown the beauty of mathematics. What that means exactly for me is hard to grasp, but it isn't about being able to add big numbers quickly.
-						</tipsocontent>
-					</none-disp>
-					, <tipso id="tipso-philosophy">Philosophy</tipso>
-					<none-disp>
-						<tipsocontent id="tipsocontent-philosophy">
-							A lot of subjects I'm interested in fall in this category. I'm not a philosopher, but I'd also say my understading goes deeper than an average person's.
-						</tipsocontent>
-					</none-disp>
-				</p>
+				Hello, I'm <tipso id="tipso-name">Sophia</tipso>!
+				<none-disp>
+					<tipsocontent id="tipsocontent-name">
+						A name chosen for its meaning, derived from Ancient Greek σοφῐ́ᾱ, "knowledge of a higher kind: learning, wisdom" (Wiktionary.org).
+					</tipsocontent>
+				</none-disp>
+				<br>					
+				<b>Things I am interested in:</b>
+				<tipso id="tipso-linguistics">Linguistics</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-linguistics">
+						A recent interest on my life timeline.
+						I'm a Czech native, fluent in English, learning French in school, and casually Esperanto at home.
+						I'm interested in various languages, including Japanese (and its kanji).
+						I like constructing languages and writing systems.
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-compsci">Computer Science</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-compsci">
+						This was my main interest up until I got into linguistics. Binary adders, cellular automata, the halting problem; certainly not everything, but also a lot. As for programming languagees: I use HTML, CSS and JS (duh) and I know a bunch of Lua and recently Python, also some C# and Java basics.
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-maths">Maths</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-maths">
+						Unlike many people, I've been shown the beauty of mathematics. What that means exactly for me is hard to grasp, but it isn't about being able to add big numbers quickly.
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-philosophy">Philosophy</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-philosophy">
+						A lot of subjects I'm interested in fall in this category. I'm not a philosopher, but I'd also say my understading goes deeper than an average person's.
+					</tipsocontent>
+				</none-disp>
+				<br>
+				<b>I am:</b>
+				<tipso id="tipso-politics" tooltipHover="true">centre-left</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-politics">
+						On most issues, I have a left-leaning centrist approach.
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-autism">autistic</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-autism">
+						Yes, unironically. I'm never perfect at social interactions.
+						I can be overloaded by too many things happening around me, I don't like sudden noises, taps on the shoulder, etc., because I'm often focused else than on my surroundings.
+						Routines are a must for me, nothing spontaneous.
+						There are certain exceptions, but that's the general idea.
+						(Before you diagnose yourself based on just these, I can say I am formally diagnosed for Asperger's.)
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-gender">agender</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-gender">
+						Gender? Nah. I don't mind any pronouns (I use "they"), so I'm fine with you using "she" or "he", but I'm not a boy or a girl, just a person.
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-sexuality">grey-asexual</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-sexuality">
+						Sexuality? Nah. I'm practically asexual. 
+					</tipsocontent>
+				</none-disp>
+				, <tipso id="tipso-romance">aromantic</tipso>
+				<none-disp>
+					<tipsocontent id="tipsocontent-romance">
+						Romance? Nah. I'm not into dating and such. I can still bond in close friendships, though.
+					</tipsocontent>
+				</none-disp>
+				
 			</content>
 		</page>
 	</body>
