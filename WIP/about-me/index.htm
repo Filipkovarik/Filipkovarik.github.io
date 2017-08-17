@@ -11,37 +11,18 @@
 		<script src="../js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 		<script src="../js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/tipso/tipso.min.js"></script>
+		<script src="js/tipso-auto.js"></script>
 		<script src="../js/_template_.js"></script>
-		
-		<script>
-			$(_=>{
-			
-			ext=(o,p)=>((p,r)=>(Object.keys(o).forEach(k=>r[k]=o[k]),Object.keys(p).forEach(k=>r[k]=p[k]),r))(o, p,{})
-			
-			tpsdef = {
-				position: 'bottom',
-				background: 'white',
-				color: 'black',
-				width: '25vw',
-				maxWidth: '50vw'
-			}
-			
-			tps=(nm,p={})=>$("#tipso-"+nm).tipso(ext(tpsdef,ext({contentElementId: "tipsocontent-"+nm}, p)))
-			
-			$("tipso").toArray().map(x=>x.id.split("tipso-")[1]).forEach(x=>tps(x, {tooltipHover: $("#tipso-"+x).attr("tooltipHover")=="true"}))
-			
-			})
-		</script>
 	</head>
 	<body>
 		<iframe src="../topnav.htm" id="topnav"></iframe>
 		<iframeghost></iframeghost>
 		<page>
 			<content>
-				Hello, I'm <tipso id="tipso-name">Sophia</tipso>!
+				Hello, I'm <tipso id="tipso-name">Sophiα</tipso>!
 				<none-disp>
 					<tipsocontent id="tipsocontent-name">
-						A name chosen for its meaning, derived from Ancient Greek σοφῐ́ᾱ, "knowledge of a higher kind: learning, wisdom" (Wiktionary.org).
+						A name chosen for its meaning, derived from Ancient Greek σοφῐ́ᾱ, "knowledge of a higher kind: learning, wisdom" (Wiktionary.org); I sometimes use an alpha instead of an "a"
 					</tipsocontent>
 				</none-disp>
 				<br>					
