@@ -23,7 +23,7 @@ a {
 	color: inherit;
 }
 
-navitemout  {
+topnav > a  {
 	display: inline-flex;
     align-items: center;
 	align-self: stretch;
@@ -32,11 +32,11 @@ navitemout  {
 	border-right: 1px var(--scheme-border-color) solid;
 }
 
-navitemout:hover  {
+topnav > a:hover  {
 	background-color: var(--scheme-color-3);
 }
 
-navitemout.no-padding {
+topnav > a.no-padding {
 	padding: 0;
 }
 
