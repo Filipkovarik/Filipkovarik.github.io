@@ -4,7 +4,9 @@
 	--scheme-color-3: navajowhite;
 	--scheme-border-color: rgba(0,0,0,0.5);
 	--scheme-text-color-1: black;
-	--scheme-border-radius: 3px;
+	--scheme-border-radius: 2.2vmin;
+	--scheme-border-width: 0.2vmin;
+	--topnav-border-radius: 3px;
 	--topnav-height: calc(5vh + 20px);
 	--content-margin-v: 5vh;
 	--content-margin-h: 5vw;
@@ -23,8 +25,8 @@ iframe#topnav {
 	z-index: 10;
 	overflow: scroll;
 	box-shadow: 0px 1px 2vh 0px rgba(0, 0, 0, 0.8);
-	border-bottom-left-radius: var(--scheme-border-radius);
-	border-bottom-right-radius: var(--scheme-border-radius);
+	border-bottom-left-radius: var(--topnav-border-radius);
+	border-bottom-right-radius: var(--topnav-border-radius);
 }
 	
 iframeghost {
