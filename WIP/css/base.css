@@ -45,11 +45,5 @@ content {
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 2.2vmin;
 	min-height: calc(90vh - var(--topnav-height));
-	font-size: 4vmin;
-}
-
-.tipso-content {font-size: 4vmin}
-
-none-disp {
-	display: none
+	font-size: calc(100% + 0.5vw + 0.5vh);
 }
