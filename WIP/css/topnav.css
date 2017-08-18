@@ -1,10 +1,11 @@
 :root {
-	--icon-size: 70vh;
+	--icon-size: 65vh;
 }
 
 
 html {
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: "Times New Roman", Times, serif;
+	font-weight:900;
 	overflow: hidden;
 }
 
