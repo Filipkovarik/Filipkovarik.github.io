@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+<script>
+let D, sc, tr;
+eval(decodeURIComponent(location.search.substring(3)))
+function c(d){
+	l = sc.slice(0).reverse()
+	l.push(Infinity)
+	d = ~~(d/tr)
+	r = [];
+	for (lm of l){
+		r.push(d%lm)
+		d = ~~(d/lm)
+	}
+	return r.reverse()
+}
+function twine(a,b){let c = []; let l = Math.min(a.length,b.length); for(i=0;i<l;i++){c.push(a.shift()); c.push(b.shift());} c.push(...(a.length>0?a:b)); return c }
+function tick(){
+	let dsp = c(D-new Date(),sc,tr)
+	document.getElementById("d").innerHTML = (twine(" $ weeks, $ days, $ hours, $ minutes, $ seconds and $ centiseconds".split(" $ "),dsp).join(" ")+" remaining")
+	
+}
+setInterval(tick,10)
+</script>
+</head>
+<body>
+<h1 id="d">
+</h1>
+</body>
+</html>
