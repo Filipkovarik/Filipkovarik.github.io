@@ -1,7 +1,8 @@
 ﻿<html>
 <head>
+<title>ttl</title>
 <script>
-let D, sc, tr;
+let D, sc, tr, lbl, ttl;
 eval(decodeURIComponent(location.search.substring(3)))
 function c(d){
 	l = sc.slice(0).reverse()
@@ -17,13 +18,14 @@ function c(d){
 function twine(a,b){let c = []; let l = Math.min(a.length,b.length); for(i=0;i<l;i++){c.push(a.shift()); c.push(b.shift());} c.push(...(a.length>0?a:b)); return c }
 function tick(){
 	let dsp = c(D-new Date(),sc,tr)
-	document.getElementById("d").innerHTML = (twine(" $ weeks, $ days, $ hours, $ minutes, $ seconds and $ centiseconds".split(" $ "),dsp).join(" ")+" remaining")
+	document.getElementById("d").innerHTML = ttl + ":<br><br>" + (twine(lbl.split("$"),dsp).join("")+" remaining")
 	
 }
 setInterval(tick,10)
+document.getElementsByTagName("title")[0].innerHTML = ttl
 </script>
 </head>
-<body>
+<body align="center">
 <h1 id="d">
 </h1>
 </body>
